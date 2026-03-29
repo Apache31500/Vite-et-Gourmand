@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nos Menus — Vite & Gourmand</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Vite & Gourmand</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="menus.html">Menus</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="connexion.html">Connexion</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- TITRE PAGE -->
+    <section class="titre-page">
+      <div class="container text-center">
+        <h1>Nos Menus</h1>
+        <hr class="separateur mx-auto" />
+        <p>Découvrez nos prestations pour tous vos événements</p>
+      </div>
+    </section>
+
+    <!-- FILTRES -->
+    <section class="filtres">
+      <div class="container">
+        <div class="row g-3 align-items-end">
+          <div class="col-md-2">
+            <label class="form-label">Prix maximum</label>
+            <input
+              type="number"
+              class="form-control"
+              id="filtre-prix-max"
+              placeholder="Ex: 100"
+            />
+          </div>
+          <div class="col-md-2">
+            <label class="form-label">Prix minimum</label>
+            <input
+              type="number"
+              class="form-control"
+              id="filtre-prix-min"
+              placeholder="Ex: 20"
+            />
+          </div>
+          <div class="col-md-2">
+            <label class="form-label">Thème</label>
+            <select class="form-select" id="filtre-theme">
+              <option value="">Tous</option>
+              <option value="noel">Noël</option>
+              <option value="paques">Pâques</option>
+              <option value="classique">Classique</option>
+              <option value="evenement">Évènement</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label class="form-label">Régime</label>
+            <select class="form-select" id="filtre-regime">
+              <option value="">Tous</option>
+              <option value="classique">Classique</option>
+              <option value="vegetarien">Végétarien</option>
+              <option value="vegan">Vegan</option>
+              <option value="sans-gluten">Sans gluten</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label class="form-label">Nb personnes min</label>
+            <input
+              type="number"
+              class="form-control"
+              id="filtre-personnes"
+              placeholder="Ex: 10"
+            />
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-filtrer w-100" id="btn-filtrer">
+              Filtrer
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRILLE MENUS -->
+    <section class="grille-menus">
+      <div class="container">
+        <div class="row" id="liste-menus">
+          <!-- Carte menu 1 -->
+          <div
+            class="col-md-4 mb-4 carte-menu-wrapper"
+            data-prix="45"
+            data-theme="noel"
+            data-regime="classique"
+            data-personnes="10"
+          >
+            <div class="carte-menu">
+              <div class="carte-menu-image">
+                <span>Photo du menu</span>
+              </div>
+              <div class="carte-menu-body">
+                <span class="badge-theme">Noël</span>
+                <h3>Menu Noël Prestige</h3>
+                <p>Un menu raffiné pour célébrer les fêtes avec élégance.</p>
+                <div class="carte-menu-footer">
+                  <span class="prix">45€ / pers</span>
+                  <span class="personnes">Min. 10 pers</span>
+                </div>
+                <a href="menu-detail.html" class="btn btn-principal w-100 mt-3">
+                  Voir le détail
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte menu 2 -->
+          <div
+            class="col-md-4 mb-4 carte-menu-wrapper"
+            data-prix="35"
+            data-theme="paques"
+            data-regime="vegetarien"
+            data-personnes="8"
+          >
+            <div class="carte-menu">
+              <div class="carte-menu-image">
+                <span>Photo du menu</span>
+              </div>
+              <div class="carte-menu-body">
+                <span class="badge-theme">Pâques</span>
+                <h3>Menu Pâques Végétarien</h3>
+                <p>Une célébration printanière tout en légèreté.</p>
+                <div class="carte-menu-footer">
+                  <span class="prix">35€ / pers</span>
+                  <span class="personnes">Min. 8 pers</span>
+                </div>
+                <a href="menu-detail.html" class="btn btn-principal w-100 mt-3">
+                  Voir le détail
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte menu 3 -->
+          <div
+            class="col-md-4 mb-4 carte-menu-wrapper"
+            data-prix="55"
+            data-theme="evenement"
+            data-regime="classique"
+            data-personnes="20"
+          >
+            <div class="carte-menu">
+              <div class="carte-menu-image">
+                <span>Photo du menu</span>
+              </div>
+              <div class="carte-menu-body">
+                <span class="badge-theme">Évènement</span>
+                <h3>Menu Mariage Classique</h3>
+                <p>Le menu idéal pour un jour inoubliable.</p>
+                <div class="carte-menu-footer">
+                  <span class="prix">55€ / pers</span>
+                  <span class="personnes">Min. 20 pers</span>
+                </div>
+                <a href="menu-detail.html" class="btn btn-principal w-100 mt-3">
+                  Voir le détail
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Message aucun résultat -->
+        <div id="aucun-resultat" class="text-center py-5" style="display: none">
+          <p
+            style="
+              font-family: &quot;Lato&quot;;
+              color: var(--gris);
+              font-size: 18px;
+            "
+          >
+            Aucun menu ne correspond à vos critères.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Horaires</h5>
+            <p>Lundi - Vendredi : 09h00 - 18h00</p>
+            <p>Samedi : 09h00 - 17h00</p>
+            <p>Dimanche : Fermé</p>
+          </div>
+          <div class="col-md-6 text-end">
+            <a href="mentions-legales.html">Mentions légales</a>
+            &nbsp;|&nbsp;
+            <a href="cgv.html">CGV</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
